@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Rails Control Panel</title>
+  <link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" media="screen" charset="utf-8">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      // This is more like it!
+    });
+  </script>
+</head>
+<body>
+  <div id="container">
+    <h1>Deploy Your Application</h1>
+    <p>To deploy your application, you'll need to use <a href="http://capify.org/">Capistrano</a>.  If you don't already have it installed on your development machine, enter this command at the shell/command prompt:</p>
+    <pre>gem install capistrano</pre>
+    <p>Once Capistrano is installed, you'll want to apply it to your Rails application.  From the root of your application:</p>
+    <pre>capify .</pre>
+    <p>Then, replace the default <strong>deploy.rb</strong> that is created with the following:</p>
+    <pre>set :repository, "."
+set :scm, :none
+set :deploy_via, :copy
+
+set :user, "student"
+set :runner, "student"
+set :password, "jeffcohen"
+
+role :web, 'ec2-xx-101-210-191.compute-1.amazonaws.com'
+role :app, 'ec2-xx-101-210-191.compute-1.amazonaws.com'
+role :db, 'ec2-xx-101-210-191.compute-1.amazonaws.com', :primary => true</pre>
+    <p>Finally, deploy your application for the first time:</p>
+    <pre>cap deploy:setup
+cap deploy</pre>
+  </div>
+</body>

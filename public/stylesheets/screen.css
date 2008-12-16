@@ -1,0 +1,51 @@
+/* Blueprint's reset.css */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-family:inherit;vertical-align:baseline;}
+body {line-height:1.5;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+table, td, th {vertical-align:middle;}
+/*blockquote:before, blockquote:after, q:before, q:after {content:"";}
+blockquote, q {quotes:"" "";}*/
+a img {border:none;}
+/* end Blueprint's reset.css */
+
+/* General Page Styles */
+body {
+  font-family: lucida grande, arial, helvetica, sans-serif;
+  background: #fff;
+  font-size: 62.5%;
+}
+label { 
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+}
+p { padding: 0.8em 0; }
+p, li {
+  line-height: 1.7em;
+  color: #404040;
+  font-size: 1.2em;
+}
+pre {
+  font-size: 1.2em;
+  font-family: consolas, courier;
+  background: #000;
+  color: #25FF12;
+  padding: 20px;
+}
+hr { background: #ddd; color:#ddd; clear:both; float:none; width:100%; height:1px; margin: 1.5em 0; border:none; }
+hr.space { background: #fff; color: #fff; }
+
+h1 {
+  font-size: 2.4em;
+  font-family: arial, sans-serif;
+  font-weight: normal;
+}
+/* End General Page Styles */
+
+/* Layout */
+div#container {
+  width: 860px;
+  margin: 20px auto;
+}
+/* End Layout */
